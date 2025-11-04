@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlueTomorrow | 푸른 바다, 우리가 만드는 내일</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1e2a2f;
+      background-color: #f5f9fa;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #0077b6;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #1e2a2f;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 10%;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    /* 소개 섹션 */
+    #intro {
+      background: linear-gradient(135deg, #caf0f8, #90e0ef);
+      color: #023e8a;
+    }
+
+    #intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    #intro p {
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    /* 핵심 활동 */
+    #activities {
+      background: #ffffff;
+    }
+
+    #activities h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #0077b6;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: #e6f6ff;
+      border-radius: 15px;
+      padding: 25px;
+      width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 119, 182, 0.15);
+    }
+
+    .card h3 {
+      color: #023e8a;
+      margin-bottom: 10px;
+    }
+
+    /* 캠페인 참여 */
+    #campaign {
+      background: linear-gradient(135deg, #90e0ef, #48cae4);
+      color: white;
+    }
+
+    #campaign button {
+      margin-top: 25px;
+      background: white;
+      color: #0077b6;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #campaign button:hover {
+      background: #caf0f8;
+    }
+
+    /* 뉴스/스토리 */
+    #news {
+      background: #f8fdff;
+    }
+
+    .news-item {
+      max-width: 700px;
+      text-align: left;
+      margin-bottom: 25px;
+      padding: 15px;
+      border-left: 4px solid #0077b6;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .news-item h4 {
+      color: #0077b6;
+      margin-bottom: 8px;
+    }
+
+    /* 후원/문의 */
+    #contact {
+      background: linear-gradient(135deg, #48cae4, #0096c7);
+      color: white;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button.submit {
+      background: #023e8a;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #023e8a;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      .cards {
+        flex-direction: column;
+      }
+      form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BlueTomorrow</h1>
+    <nav>
+      <a href="#intro">소개</a>
+      <a href="#activities">핵심활동</a>
+      <a href="#campaign">캠페인</a>
+      <a href="#news">뉴스</a>
+      <a href="#contact">후원/문의</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>푸른 바다, 우리가 만드는 내일</h2>
+    <p>BlueTomorrow는 해양 플라스틱 문제를 해결하기 위해 고등학생들이 만든 비영리 재단입니다.  
+    우리는 바다의 미래를 지키기 위해 작은 실천이 큰 변화를 만든다고 믿습니다.</p>
+  </section>
+
+  <section id="activities">
+    <h2>핵심 활동</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>플로깅 캠페인</h3>
+        <p>해변을 걸으며 쓰레기를 줍는 플로깅 활동을 통해 깨끗한 해안을 만들어갑니다.</p>
+      </div>
+      <div class="card">
+        <h3>업사이클 워크숍</h3>
+        <p>수거한 플라스틱을 업사이클링 제품으로 재탄생시키는 워크숍을 운영합니다.</p>
+      </div>
+      <div class="card">
+        <h3>환경 교육</h3>
+        <p>청소년과 지역 주민을 위한 해양 환경 보호 교육 프로그램을 진행합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="campaign">
+    <h2>캠페인 참여</h2>
+    <p>지구의 푸른 내일을 위해 당신의 한 걸음이 필요합니다.</p>
+    <button id="joinBtn">참여 신청하기</button>
+  </section>
+
+  <section id="news">
+    <h2>뉴스 / 스토리</h2>
+    <div class="news-item">
+      <h4>🌊 [2025.10] 플라스틱 제로 데이 성료!</h4>
+      <p>전국 10개 해안가에서 동시에 진행된 플로깅 행사에 1,000명 이상이 참여했습니다.</p>
+    </div>
+    <div class="news-item">
+      <h4>🐠 [2025.08] 청소년 업사이클 챌린지 개최</h4>
+      <p>고등학생들이 직접 만든 플라스틱 예술 작품이 전시되어 화제가 되었습니다.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>후원 및 문의</h2>
+    <p>함께 바다를 지키는 동반자가 되어주세요 🌍</p>
+    <form id="contactForm">
+      <input type="text" placeholder="이름" required />
+      <input type="email" placeholder="이메일" required />
+      <textarea rows="4" placeholder="메시지"></textarea>
+      <button class="submit" type="submit">보내기</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 BlueTomorrow Foundation. All Rights Reserved.
+  </footer>
+
+  <script>
+    document.getElementById("joinBtn").addEventListener("click", () => {
+      alert("캠페인 참여 신청 페이지는 준비 중입니다 🌊");
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("문의가 접수되었습니다. 감사합니다 💙");
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>
